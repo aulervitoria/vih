@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criar Coleção e Adicionar Dado no Firestore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #06afda;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #8312ec;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(150, 10, 131, 0.1);
+            border-left: 4px solid #b75bdb;
+            border-right: 4px solid #b75bdb;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 0px;
+            border: 1px solid #6f29cc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #b75bdb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d479c5;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #9a4cda;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(22, 128, 199, 0.1);
+            border-left: 4px solid #d479c5;
+            border-right: 4px solid #d479c5;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adicionar Dados ao Firestore</h1>
+    <form id="meuFormulario">
+        <label for="tagVideo">Tag de Vídeo do YouTube:</label>
+        <input type="text" id="tagVideo" name="tagVideo" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Vídeos Salvos:</h2>
+    <ul id="videosSalvos"></ul>
+
+    <!-- Adicione a biblioteca do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Incluir o script JavaScript -->
+    <script src="vi.js"></script>
+</body>
+
+</html>
